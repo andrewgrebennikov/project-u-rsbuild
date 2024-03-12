@@ -1,0 +1,39 @@
+@import 'reset';
+@import './variables/global';
+@import './themes/light';
+@import './themes/dark';
+@import './themes/red';
+
+html {
+  color-scheme: var(--color-scheme);
+}
+
+.app {
+  min-height: 100vh;
+  font: var(--font-m);
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+}
+
+.app-content {
+  overflow: hidden;
+  display: flex;
+  height: calc(100vh - 66px);
+}
+
+.app-page {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.icon {
+  pointer-events: none;
+
+  display: inline-block;
+  flex-shrink: 0;
+
+  color: inherit;
+  vertical-align: top;
+
+  fill: currentcolor;
+}

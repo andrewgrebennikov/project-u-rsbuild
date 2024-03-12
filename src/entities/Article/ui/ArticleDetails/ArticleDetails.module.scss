@@ -1,0 +1,22 @@
+.avatar {
+  margin: 0 0 32px;
+}
+
+.title {
+  margin: 0 0 16px;
+}
+
+.subtitle,
+.info {
+  margin: 0 0 24px;
+}
+
+.info {
+  display: grid;
+  gap: 8px 0;
+}
+
+.views,
+.date {
+  margin: 0;
+}

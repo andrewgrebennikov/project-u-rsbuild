@@ -1,0 +1,8 @@
+.listing {
+  display: grid;
+  gap: 16px 80px;
+}
+
+.listingGrid {
+  grid-template-columns: repeat(auto-fill, minmax(493px, 1fr));
+}

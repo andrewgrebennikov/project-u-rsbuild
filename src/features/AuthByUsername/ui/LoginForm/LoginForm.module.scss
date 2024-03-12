@@ -1,0 +1,32 @@
+.fieldset {
+  margin: 0 0 24px;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  float: left;
+
+  width: 100%;
+  margin: 0 0 16px;
+  padding: 0;
+
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.input {
+  &:not(:last-child) {
+    margin: 0 0 16px;
+  }
+}
+
+.error {
+  margin: 0 0 16px;
+  color: var(--error-color);
+}

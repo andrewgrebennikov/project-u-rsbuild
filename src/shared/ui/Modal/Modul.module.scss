@@ -1,0 +1,46 @@
+.modal {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open {
+  animation-name: show;
+  animation-duration: 0.3s;
+}
+
+.overlay {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-color: rgba(0 0 0 / 60%);
+}
+
+.content {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  max-height: calc(100% - 64px);
+  margin: 32px;
+  padding: 16px;
+
+  color: black;
+
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,43 @@
+.sidebar {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 32px 0;
+  justify-content: space-between;
+
+  width: 300px;
+  padding: 16px;
+
+  background-color: var(--secondary-color);
+
+  transition: width 0.3s;
+}
+
+.nav {
+  display: grid;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.collapsed {
+  width: 80px;
+}
+
+.switchers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.toggle {
+  position: absolute;
+  z-index: 1;
+  right: -40px;
+  bottom: 16px;
+
+  background-color: var(--secondary-color);
+  border-radius: 0;
+}

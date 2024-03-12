@@ -1,0 +1,49 @@
+name: linting, testing, building
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.19.0]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{matrix.node-version}}
+
+      - name: Install modules
+        run: npm install
+
+      - name: Build production project
+        run: npm run build:prod
+        if: always()
+
+#      - name: Linting for ts, js
+#        run: npm run lint:eslint
+#        if: always()
+
+      - name: Linting for css, scss
+        run: npm run lint:stylelint
+        if: always()
+
+      - name: Unit testing
+        run: npm run test:unit
+        if: always()
+
+      - name: Build storybook
+        run: npm run storybook:build
+        if: always()
+
+#      - name: Screenshot testing
+#        run: npm run test:ui:ci
+#        if: always()

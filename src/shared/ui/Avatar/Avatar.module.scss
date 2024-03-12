@@ -1,0 +1,10 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  object-fit: cover;
+  border: 3px solid var(--secondary-color);
+  border-radius: 50%;
+}

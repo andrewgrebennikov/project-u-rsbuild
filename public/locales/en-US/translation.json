@@ -1,0 +1,16 @@
+{
+  "Главная": "Main",
+  "О нас": "About",
+  "РУ": "RU",
+  "Войти": "Login",
+  "Выйти": "Logout",
+  "Увеличить": "Increment",
+  "Уменьшить": "Decrement",
+  "Форма авторизации": "Authorization",
+  "Отправить": "Send",
+  "Имя": "Name",
+  "Пароль": "Password",
+  "Вы ввели неверный логин или пароль": "You entered an incorrect username or password",
+  "Страница О нас": "Page about",
+  "Страница профиля": "Page profile"
+}

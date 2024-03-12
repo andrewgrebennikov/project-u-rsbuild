@@ -1,0 +1,28 @@
+.block {
+  position: relative;
+
+  margin: 0 0 24px;
+  padding: 16px;
+
+  color: white;
+
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+
+  pre {
+    overflow: auto;
+    margin: 0;
+  }
+}
+
+.btnCopy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  transition: color 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: rgb(255 255 255 / 50%);
+  }
+}
