@@ -13,5 +13,6 @@ type Story = StoryObj<typeof LoginModalComponent>;
 export const LoginModal: Story = {
   args: {
     isOpen: true,
+    onClose: () => {},
   },
 };

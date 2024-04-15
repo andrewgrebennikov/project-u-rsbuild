@@ -1,7 +1,7 @@
 import { cx } from 'classix';
+import { Link } from 'react-router-dom';
 
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 
 import { Comment } from '../../model/types/comment';
@@ -21,9 +21,9 @@ export const CommentItem = (props: ICommentItemProps) => {
     <div className={cx(className, styles.commentItem)}>
       <div className={styles.user}>
         {user.avatar ? (
-          <AppLink className={styles.link} to={`${RoutePath.profile}${user.id}`}>
+          <Link className={styles.link} to={`${RoutePath.profile(user.id)}`}>
             <Avatar className={styles.avatar} src={user.avatar} alt={user.username} width={32} height={32} />
-          </AppLink>
+          </Link>
         ) : null}
         <span className={styles.username}>{user.username}</span>
       </div>

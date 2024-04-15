@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import { Page } from 'widgets/Page/Page';
 
-export const NotFound = () => {
-  const { t } = useTranslation('notFound');
+const NotFound = () => {
+  const { t } = useTranslation('translation');
 
   useEffect(() => {
     document.title = t('Страница не найдена');
@@ -16,3 +16,5 @@ export const NotFound = () => {
     </Page>
   );
 };
+
+export default NotFound;

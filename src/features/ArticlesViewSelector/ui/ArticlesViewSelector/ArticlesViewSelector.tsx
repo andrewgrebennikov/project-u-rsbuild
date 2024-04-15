@@ -2,7 +2,7 @@ import { cx } from 'classix';
 
 import IconGrid from 'shared/assets/icons/icon-grid.svg';
 import IconList from 'shared/assets/icons/icon-list.svg';
-import { IconButton } from 'shared/ui/IconBtn/IconButton';
+import { Button } from 'shared/ui/Button/Button';
 
 import { ArticlesView } from '../../model/types/articles';
 
@@ -17,11 +17,11 @@ interface IArticleViewProps {
 const views = [
   {
     viewType: ArticlesView.LIST,
-    icon: <IconList width="24" height="24" />,
+    icon: <IconList className="icon" width="24" height="17" />,
   },
   {
     viewType: ArticlesView.GRID,
-    icon: <IconGrid width="24" height="24" />,
+    icon: <IconGrid className="icon" width="20" height="20" />,
   },
 ];
 
@@ -38,13 +38,13 @@ export const ArticlesViewSelector = (props: IArticleViewProps) => {
         const { icon, viewType } = viewItem;
 
         return (
-          <IconButton
+          <Button
             key={index}
             onClick={handleViewChange(viewType)}
-            className={cx(viewType === view && styles.articlesViewActive)}
+            className={cx(styles.viewBtn, viewType === view && styles.viewBtnActive)}
           >
             {icon}
-          </IconButton>
+          </Button>
         );
       })}
     </div>

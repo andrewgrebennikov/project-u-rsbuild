@@ -5,7 +5,7 @@ import { ValueOf } from 'shared/lib/types/valueOf';
 export const Theme = {
   LIGHT: 'light',
   DARK: 'dark',
-  RED: 'red',
+  SYSTEM: 'system',
 } as const;
 
 export type Theme = ValueOf<typeof Theme>;
@@ -16,7 +16,7 @@ interface IThemeContextProps {
 }
 
 const initialState: IThemeContextProps = {
-  theme: Theme.LIGHT,
+  theme: Theme.SYSTEM,
   setTheme: () => null,
 };
 

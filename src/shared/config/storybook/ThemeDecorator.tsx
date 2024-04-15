@@ -4,19 +4,31 @@ import { useEffect } from 'react';
 import { Theme, ThemeProvider } from 'app/providers/ThemeProvider';
 
 export const ThemeDecorator = (Story: StoryFn, context: StoryContext) => {
-  const theme = context?.parameters?.theme || context?.globals?.theme;
+  const theme = context?.globals?.colorScheme;
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove(Theme.LIGHT, Theme.DARK, Theme.RED);
+    const root = document.documentElement;
+    const themeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    if (theme === Theme.LIGHT) {
-      root.classList.add(Theme.LIGHT);
-    } else if (theme === Theme.DARK) {
-      root.classList.add(Theme.DARK);
-    } else {
-      root.classList.add(Theme.RED);
-    }
+    const handleThemeChange = () => {
+      root.classList.remove(Theme.LIGHT, Theme.DARK);
+
+      if (theme === Theme.SYSTEM) {
+        const systemTheme = themeQuery.matches ? 'dark' : 'light';
+
+        root.classList.add(systemTheme);
+      } else {
+        root.classList.add(theme);
+      }
+    };
+
+    handleThemeChange();
+
+    themeQuery.addEventListener('change', handleThemeChange);
+
+    return () => {
+      themeQuery.removeEventListener('change', handleThemeChange);
+    };
   }, [theme]);
 
   return (

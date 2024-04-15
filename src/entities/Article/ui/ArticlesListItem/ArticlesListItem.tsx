@@ -1,11 +1,11 @@
 import { cx } from 'classix';
 import { HTMLAttributeAnchorTarget } from 'react';
+import { Link } from 'react-router-dom';
 
 import { ArticlesView } from 'features/ArticlesViewSelector';
 
 import IconEye from 'shared/assets/icons/icon-eye.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonVariant } from 'shared/ui/Button/Button';
 
@@ -26,16 +26,16 @@ export const ArticlesListItem = (props: IArticlesListItemProps) => {
   const textBlock = article.blocks.find((block) => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
 
   const articleImage = (
-    <AppLink to={RoutePath.article_details(article.id)} className={styles.link} target={target}>
+    <Link to={RoutePath.article_details(article.id)} className={styles.link} target={target}>
       <picture className={styles.picture}>
         <img height="200" width="200" className={styles.image} src={article.img} alt={article.title} />
       </picture>
-    </AppLink>
+    </Link>
   );
 
   const views = (
     <div className={styles.views}>
-      {article.views} <IconEye width="24" height="24" className="icon" />
+      {article.views} <IconEye width="16" height="16" className="icon" />
     </div>
   );
 
@@ -43,9 +43,6 @@ export const ArticlesListItem = (props: IArticlesListItemProps) => {
     return (
       <article className={cx(styles.articleCard, className, view === ArticlesView.GRID && styles.articleCardGrid)}>
         {articleImage}
-        <time dateTime={article.createdAt} className={styles.time}>
-          {article.createdAt}
-        </time>
         <div className={styles.info}>
           <ul className={styles.types}>
             {article.type.map((type, index) => {

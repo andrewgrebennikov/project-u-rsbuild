@@ -18,7 +18,7 @@ export const getSidebarItems = createSelector(getAuthData, (authData) => {
       Icon: IconHome,
     },
     {
-      name: 'О нас',
+      name: 'О сайте',
       path: RoutePath.about(),
       Icon: IconAbout,
     },
@@ -33,9 +33,14 @@ export const getSidebarItems = createSelector(getAuthData, (authData) => {
         authOnly: true,
       },
       {
-        name: 'Страница профиля',
+        name: 'Профиль',
         path: RoutePath.profile(authData.id),
         Icon: IconProfile,
+        authOnly: true,
+      },
+      {
+        name: 'Создать статью',
+        path: RoutePath.create_article(),
         authOnly: true,
       },
     );

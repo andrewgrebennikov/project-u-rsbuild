@@ -27,13 +27,13 @@ const initialReducers: ReducersList = {
 };
 
 interface IArticleDetailsProps {
-  articleId: string;
+  articleId: string | undefined;
   className?: string;
 }
 
 export const ArticleDetails = (props: IArticleDetailsProps) => {
   const { articleId } = props;
-  const { t } = useTranslation('article');
+  const { t } = useTranslation('translation');
   const dispatch = useAppDispatch();
   const articleData = useSelector(getArticleData);
   const isLoading = useSelector(getArticleIsLoading);

@@ -5,7 +5,7 @@ import { Page } from 'widgets/Page/Page';
 
 const ArticleDetailsEditPage = () => {
   const { id } = useParams();
-  const { t } = useTranslation();
+  const { t } = useTranslation('translation');
 
   return <Page>{t(`Edit article by id: ${id}`)}</Page>;
 };

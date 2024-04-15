@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Page } from 'widgets/Page/Page';
 
 const MainPage = () => {
-  const { t } = useTranslation('main');
+  const { t } = useTranslation('translation');
 
   useEffect(() => {
     document.title = t('Главная страница');
@@ -13,6 +13,7 @@ const MainPage = () => {
   return (
     <Page>
       <h1>{t('Главная страница')}</h1>
+      <p>{t('Описание главной страницы')}</p>
     </Page>
   );
 };

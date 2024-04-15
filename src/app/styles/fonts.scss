@@ -1,0 +1,13 @@
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-weight: $fweight;
+    font-style: $fstyle;
+    font-display: swap;
+    src: url($furl) format('woff2');
+  }
+}
+
+@include font('Inter', normal, 400, '../../shared/assets/fonts/Inter-Regular.woff2');
+@include font('Inter', normal, 600, '../../shared/assets/fonts/Inter-SemiBold.woff2');
+@include font('Tuffy', normal, 700, '../../shared/assets/fonts/Tuffy-Bold.woff2');

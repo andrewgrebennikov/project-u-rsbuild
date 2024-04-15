@@ -1,10 +1,40 @@
 .navLink {
-  font-size: 20px;
+  display: flex;
+  gap: 0 8px;
+  align-items: center;
 
-  &:hover,
+  padding: 9px 30px;
+
+  font-size: var(--font-size-lg);
+  color: #fdfdfd;
+  text-decoration: none;
+
+  border-radius: 5px;
+}
+
+.navLinkActive {
+  background-color: var(--nav-link-active-bg);
+}
+
+.navLinkCreate {
+  align-self: center;
+
+  margin: auto 0 0;
+  padding: 8px 26px;
+
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--create-article-color);
+
+  background-color: #fdfdfd;
+
+  &:hover {
+    color: var(--create-article-color-hover);
+  }
+
+  &:active,
   &:focus-visible {
-    color: black;
-    transition: color 0.3s ease-in-out;
+    color: var(--create-article-color-active);
   }
 }
 

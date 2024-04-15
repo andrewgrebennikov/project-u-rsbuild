@@ -1,3 +1,7 @@
+.form {
+  min-width: 256px;
+}
+
 .fieldset {
   margin: 0 0 24px;
   padding: 0;
@@ -13,6 +17,8 @@
 
   font-size: 28px;
   font-weight: 600;
+  color: var(--legent-color);
+  text-align: center;
 }
 
 .actions {

@@ -11,12 +11,12 @@ export const useTheme = (): IUseTheme => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const toggleTheme = () => {
-    if (theme === Theme.LIGHT) {
-      setTheme?.(Theme.DARK);
-    } else if (theme === Theme.DARK) {
-      setTheme?.(Theme.RED);
-    } else {
+    if (theme === Theme.SYSTEM) {
       setTheme?.(Theme.LIGHT);
+    } else if (theme === Theme.LIGHT) {
+      setTheme?.(Theme.DARK);
+    } else {
+      setTheme?.(Theme.SYSTEM);
     }
   };
 

@@ -14,7 +14,9 @@ jobs:
         node-version: [18.19.0]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup node
         uses: actions/setup-node@v3
@@ -28,9 +30,9 @@ jobs:
         run: npm run build:prod
         if: always()
 
-#      - name: Linting for ts, js
-#        run: npm run lint:eslint
-#        if: always()
+      #      - name: Linting for ts, js
+      #        run: npm run lint:eslint
+      #        if: always()
 
       - name: Linting for css, scss
         run: npm run lint:stylelint
@@ -40,10 +42,8 @@ jobs:
         run: npm run test:unit
         if: always()
 
-      - name: Build storybook
-        run: npm run storybook:build
+      - name: Screenshot testing
+        run: npx chromatic --exit-zero-on-changes --project-token=$PROJECT_TOKEN -b storybook:build
+        env:
+          PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         if: always()
-
-#      - name: Screenshot testing
-#        run: npm run test:ui:ci
-#        if: always()

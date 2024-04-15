@@ -1,21 +1,19 @@
 {
   "env": {
     "browser": true,
-    "es2021": true,
-    "node": true
+    "es2021": true
   },
   "extends": [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended",
     "plugin:i18next/recommended",
-    "prettier",
-    "plugin:@typescript-eslint/recommended",
     "plugin:@conarti/feature-sliced/recommended",
+    "plugin:prettier/recommended",
     "plugin:storybook/recommended"
   ],
   "globals": {
@@ -23,9 +21,15 @@
     "__API__": true,
     "__PROJECT__": true
   },
-  "ignorePatterns": [
-    "node_modules",
-    "dist"
+  "overrides": [
+    {
+      "files": [
+        "**/src/**/*.test.{ts,tsx}"
+      ],
+      "rules": {
+        "i18next/no-literal-string": "off"
+      }
+    }
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -34,12 +38,13 @@
   },
   "plugins": [
     "react",
+    "@typescript-eslint",
     "import",
-    "prettier",
-    "react-hooks",
-    "@typescript-eslint"
+    "prettier"
   ],
   "rules": {
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
     "react/display-name": "off",
     "react/prop-types": "off",
     "@typescript-eslint/no-unused-vars": "off",
@@ -82,9 +87,7 @@
         ]
       }
     ],
-    "prettier/prettier": "error",
-    "arrow-body-style": "off",
-    "prefer-arrow-callback": "off"
+    "prettier/prettier": "error"
   },
   "settings": {
     "react": {
@@ -94,15 +97,5 @@
       "typescript": true,
       "node": true
     }
-  },
-  "overrides": [
-    {
-      "files": [
-        "**/src/**/*.test.{ts,tsx}"
-      ],
-      "rules": {
-        "i18next/no-literal-string": "off"
-      }
-    }
-  ]
+  }
 }

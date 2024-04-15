@@ -11,5 +11,7 @@ export default meta;
 type Story = StoryObj<typeof CountrySelectComponent>;
 
 export const CountrySelect: Story = {
-  args: {},
+  args: {
+    value: 'Россия',
+  },
 };

@@ -1,13 +1,11 @@
-import { cx } from 'classix';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Select } from 'shared/ui/Select/Select';
+import { Listbox } from 'shared/ui/Listbox/Listbox';
 
 import { Country, country } from '../../model/types/countrySchema';
 
 interface ICountrySelect {
-  className?: string;
   value?: Country;
   readOnly?: boolean;
   onChange?: (value: Country) => void;
@@ -19,8 +17,8 @@ const options = [
 ];
 
 export const CountrySelect = (props: ICountrySelect) => {
-  const { className, value, readOnly, onChange } = props;
-  const { t } = useTranslation();
+  const { value, onChange, readOnly } = props;
+  const { t } = useTranslation('translation');
 
   const onChangeCountry = useCallback(
     (value: string) => {
@@ -29,14 +27,5 @@ export const CountrySelect = (props: ICountrySelect) => {
     [onChange],
   );
 
-  return (
-    <Select
-      className={cx(className)}
-      onChange={onChangeCountry}
-      label={t('Страна')}
-      value={value}
-      disabled={readOnly}
-      options={options}
-    />
-  );
+  return <Listbox options={options} label={t('Страна')} value={value} onChange={onChangeCountry} disabled={readOnly} />;
 };

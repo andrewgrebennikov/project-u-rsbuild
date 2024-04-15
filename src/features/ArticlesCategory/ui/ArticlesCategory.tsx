@@ -1,6 +1,7 @@
 import { cx } from 'classix';
-
-import { AppLink, AppLinkVariant } from 'shared/ui/AppLink/AppLink';
+import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import { ArticlesCategoriesField } from '../model/types/category';
 
@@ -18,31 +19,35 @@ interface IArticlesCategory {
   value: ArticlesCategoriesField;
 }
 
-const articlesCategories: IArticlesCategory[] = [
-  {
-    id: 1,
-    value: ArticlesCategoriesField.ALL,
-    name: 'Все',
-  },
-  {
-    id: 2,
-    value: ArticlesCategoriesField.IT,
-    name: 'IT',
-  },
-  {
-    id: 3,
-    value: ArticlesCategoriesField.ECONOMY,
-    name: 'Экономика',
-  },
-  {
-    id: 4,
-    value: ArticlesCategoriesField.SCIENCE,
-    name: 'Наука',
-  },
-];
-
 export const ArticlesCategory = (props: IArticlesCategoryProps) => {
   const { className, category, onCategoryChange } = props;
+  const { t } = useTranslation('translation');
+
+  const articlesCategories: IArticlesCategory[] = useMemo(
+    () => [
+      {
+        id: 1,
+        value: ArticlesCategoriesField.ALL,
+        name: t('Все'),
+      },
+      {
+        id: 2,
+        value: ArticlesCategoriesField.IT,
+        name: t('IT'),
+      },
+      {
+        id: 3,
+        value: ArticlesCategoriesField.ECONOMY,
+        name: t('Экономика'),
+      },
+      {
+        id: 4,
+        value: ArticlesCategoriesField.SCIENCE,
+        name: t('Наука'),
+      },
+    ],
+    [t],
+  );
 
   const handleCategoryChange = (newCategory: ArticlesCategoriesField) => (event: { preventDefault: () => void }) => {
     event.preventDefault();
@@ -60,14 +65,13 @@ export const ArticlesCategory = (props: IArticlesCategoryProps) => {
 
           return (
             <li key={id} className={styles.item}>
-              <AppLink
+              <Link
                 className={cx(styles.link, value === category && styles.activeLink)}
                 onClick={handleCategoryChange(value)}
                 to={{ search: `type=${value}` }}
-                variant={AppLinkVariant.OUTLINED}
               >
                 {name}
-              </AppLink>
+              </Link>
             </li>
           );
         })}

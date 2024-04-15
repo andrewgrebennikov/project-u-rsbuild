@@ -10,22 +10,34 @@ interface IThemeProviderProps {
 }
 
 export const ThemeProvider = (props: IThemeProviderProps) => {
-  const { children, defaultTheme = Theme.LIGHT } = props;
+  const { children, defaultTheme = Theme.SYSTEM } = props;
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem(THEME_LOCAL_STORAGE_KEY) as Theme) || defaultTheme,
   );
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove(Theme.LIGHT, Theme.DARK, Theme.RED);
+    const root = document.documentElement;
+    const themeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    if (theme === Theme.LIGHT) {
-      root.classList.add(Theme.LIGHT);
-    } else if (theme === Theme.DARK) {
-      root.classList.add(Theme.DARK);
-    } else {
-      root.classList.add(Theme.RED);
-    }
+    const handleThemeChange = () => {
+      root.classList.remove(Theme.LIGHT, Theme.DARK);
+
+      if (theme === Theme.SYSTEM) {
+        const systemTheme = themeQuery.matches ? 'dark' : 'light';
+
+        root.classList.add(systemTheme);
+      } else {
+        root.classList.add(theme);
+      }
+    };
+
+    handleThemeChange();
+
+    themeQuery.addEventListener('change', handleThemeChange);
+
+    return () => {
+      themeQuery.removeEventListener('change', handleThemeChange);
+    };
   }, [theme]);
 
   const value = useMemo(

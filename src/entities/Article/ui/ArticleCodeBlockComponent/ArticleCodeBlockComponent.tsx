@@ -2,7 +2,7 @@ import { cx } from 'classix';
 import { useCallback } from 'react';
 
 import IconCopy from 'shared/assets/icons/icon-copy.svg';
-import { IconButton } from 'shared/ui/IconBtn/IconButton';
+import { Button } from 'shared/ui/Button/Button';
 
 import { ArticleCodeBlock } from '../../model/types/article';
 
@@ -17,15 +17,15 @@ export const ArticleCodeBlockComponent = (props: IArticleCodeBlockProps) => {
   const { block, className } = props;
   const { code } = block;
 
-  const handleCodeCopy = useCallback(() => {
-    navigator.clipboard.writeText(code);
+  const handleCodeCopy = useCallback(async () => {
+    await navigator.clipboard.writeText(code);
   }, [code]);
 
   return (
     <div className={cx(className, styles.block)}>
-      <IconButton className={styles.btnCopy} onClick={handleCodeCopy}>
+      <Button className={styles.btnCopy} onClick={handleCodeCopy}>
         <IconCopy width="24" height="24" className="icon" />
-      </IconButton>
+      </Button>
       <pre>
         <code>{code}</code>
       </pre>

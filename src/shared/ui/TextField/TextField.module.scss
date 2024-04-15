@@ -1,0 +1,36 @@
+.field {
+  display: block;
+}
+
+.label {
+  display: inline-flex;
+
+  margin: 0 0 4px;
+
+  font-size: 12px;
+  color: var(--label-color);
+  vertical-align: top;
+}
+
+.input {
+  display: block;
+
+  width: 100%;
+  padding: 12px 8px;
+
+  font-size: 14px;
+  color: var(--input-color);
+
+  appearance: none;
+  background-color: var(--input-bg);
+  border: 0;
+  border-radius: 5px;
+
+  &:focus-visible {
+    background-color: var(--input-bg-active);
+  }
+
+  &:read-only {
+    cursor: not-allowed;
+  }
+}

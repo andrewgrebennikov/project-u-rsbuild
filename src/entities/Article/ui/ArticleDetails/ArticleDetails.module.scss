@@ -18,5 +18,17 @@
 
 .views,
 .date {
+  display: flex;
+  gap: 0 8px;
+  align-items: center;
   margin: 0;
+}
+
+.skeleton {
+  margin: 0 0 24px;
+}
+
+.skeletonHeader {
+  display: flex;
+  justify-content: center;
 }

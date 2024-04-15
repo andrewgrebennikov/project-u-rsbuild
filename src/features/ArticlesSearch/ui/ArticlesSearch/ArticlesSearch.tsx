@@ -1,6 +1,7 @@
 import { cx } from 'classix';
+import { useTranslation } from 'react-i18next';
 
-import { Input } from 'shared/ui/Input/Input';
+import { SearchField } from 'shared/ui/SearchField/SearchField';
 
 import styles from './ArticlesSearch.module.scss';
 
@@ -12,10 +13,11 @@ interface IArticlesSearchProps {
 
 export const ArticlesSearch = (props: IArticlesSearchProps) => {
   const { className, search, onSearchChange } = props;
+  const { t } = useTranslation('translation');
 
   return (
     <div className={cx(styles.search, className)}>
-      <Input placeholder="Поиск..." value={search} onChange={onSearchChange} />
+      <SearchField placeholder={t('Поиск')} value={search} onChange={onSearchChange} />
     </div>
   );
 };

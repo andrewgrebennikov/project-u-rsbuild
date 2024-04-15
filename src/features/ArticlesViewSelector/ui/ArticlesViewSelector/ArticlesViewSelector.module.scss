@@ -1,8 +1,19 @@
 .articlesView {
   display: flex;
-  gap: 0 10px;
+
+  width: fit-content;
+
+  background-color: var(--view-btns-bg);
+  border: 1px solid var(--view-btns-bd-color);
+  border-radius: 5px;
 }
 
-.articlesViewActive {
-  color: red;
+.viewBtn {
+  padding: 9px 12px;
+  color: var(--view-btn-color);
+}
+
+.viewBtnActive {
+  color: var(--view-btn-color-active);
+  background-color: var(--view-btns-bd-color);
 }

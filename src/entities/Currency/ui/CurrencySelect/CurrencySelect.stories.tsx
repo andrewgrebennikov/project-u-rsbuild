@@ -11,5 +11,7 @@ export default meta;
 type Story = StoryObj<typeof CurrencySelectComponent>;
 
 export const CurrencySelect: Story = {
-  args: {},
+  args: {
+    value: 'RUB',
+  },
 };

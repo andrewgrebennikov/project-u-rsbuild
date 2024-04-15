@@ -12,7 +12,8 @@ type Story = StoryObj<typeof ModalComponent>;
 
 export const Modal: Story = {
   args: {
-    children: 'Text',
+    children: 'Модальное окно',
     isOpen: true,
+    onClose: () => {},
   },
 };

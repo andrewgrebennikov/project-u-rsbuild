@@ -23,7 +23,7 @@ export const ProfileCard: Story = {
       firstname: 'Andrey',
       city: 'Ульяновск',
       currency: currency.RUB,
-      avatar: '',
+      avatar: 'https://upload.wikimedia.org/wikipedia/ru/f/f6/Kirby_FL.png',
     },
   },
 };

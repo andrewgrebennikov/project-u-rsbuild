@@ -4,10 +4,14 @@
   display: inline-flex;
   gap: 8px;
   align-items: center;
+  justify-content: center;
 
   margin: 0;
-  padding: 5px;
+  padding: 8px 10px;
 
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
   vertical-align: top;
 
   background-color: transparent;
@@ -16,22 +20,65 @@
 
   transition:
     color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
 
   &:disabled {
     cursor: not-allowed;
+    opacity: 0.5;
   }
 }
 
+.label {
+  align-self: center;
+  text-align: center;
+}
+
 .contained {
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
+  padding: 8px 26px;
+  color: var(--button-color);
+  background-color: var(--button-bg);
+
+  &:hover {
+    background-color: var(--button-bg-hover);
+  }
+
+  &:active,
+  &:focus-visible {
+    background-color: var(--button-bg-active);
+  }
+
+  &:focus-visible {
+    &:active {
+      background-color: var(--button-bg-hover);
+    }
+  }
 }
 
 .outlined {
-  border: 1px solid var(--primary-color);
+  padding: 7px 25px;
+  color: var(--button-outlined-color);
+  background-color: var(--button-outlined-bg);
+  border: 1px solid var(--button-bd-color);
 
-  &:disabled {
-    border-color: rgba(0 0 0 / 20%);
+  &:hover {
+    color: var(--button-outlined-color-hover);
+    background-color: var(--button-outlined-bg-hover);
+    border: 1px solid var(--button-bd-color-hover);
+  }
+
+  &:active,
+  &:focus-visible {
+    color: var(--button-outlined-color-active);
+    background-color: var(--button-outlined-bg-active);
+    border: 1px solid var(--button-bd-color-active);
+  }
+
+  &:focus-visible {
+    &:active {
+      color: var(--button-outlined-color-hover);
+      background-color: var(--button-outlined-bg-hover);
+      border: 1px solid var(--button-bd-color-hover);
+    }
   }
 }

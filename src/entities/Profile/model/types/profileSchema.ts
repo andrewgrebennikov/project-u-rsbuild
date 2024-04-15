@@ -12,11 +12,3 @@ export interface Profile {
   username?: string;
   avatar?: string;
 }
-
-export interface ProfileSchema {
-  profileData?: Profile;
-  formData?: Profile;
-  isLoading: boolean;
-  error?: string;
-  readonly: boolean;
-}

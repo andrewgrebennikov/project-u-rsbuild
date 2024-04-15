@@ -10,7 +10,7 @@ interface IPageErrorProps {
 
 export const PageError: FC<IPageErrorProps> = (props) => {
   const { className } = props;
-  const { t } = useTranslation('error');
+  const { t } = useTranslation('translation');
 
   return (
     <div className={cx(styles.container, className)} data-testid="page-error">

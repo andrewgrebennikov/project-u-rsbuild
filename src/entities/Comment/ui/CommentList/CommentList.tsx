@@ -8,13 +8,14 @@ import styles from './CommentList.module.scss';
 
 interface ICommentListProps {
   className?: string;
-  comments?: Comment[];
+  comments: Comment[];
   isLoading?: boolean;
+  error?: string;
 }
 
 export const CommentList = (props: ICommentListProps) => {
-  const { className, comments, isLoading } = props;
-  const { t } = useTranslation();
+  const { className, comments, isLoading, error } = props;
+  const { t } = useTranslation('translation');
 
   if (isLoading) {
     return (
@@ -24,17 +25,21 @@ export const CommentList = (props: ICommentListProps) => {
     );
   }
 
+  if (error) {
+    return <p className={styles.info}>{t('Произошла ошибка при загрузке комментариев')}</p>;
+  }
+
+  if (!comments.length) {
+    return <p className={styles.info}>{t('Комментарии отсутствуют')}</p>;
+  }
+
   return (
     <div className={cx(className, styles.commentList)}>
-      {comments?.length ? (
-        comments?.map((comment) => {
-          const { id } = comment;
+      {comments.map((comment) => {
+        const { id } = comment;
 
-          return <CommentItem key={id} comment={comment} />;
-        })
-      ) : (
-        <p>{t('Комментарии отсутствуют')}</p>
-      )}
+        return <CommentItem key={id} comment={comment} />;
+      })}
     </div>
   );
 };

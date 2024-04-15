@@ -6,11 +6,11 @@ import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage';
 
 import { addCommentFormReducer } from 'features/AddCommentForm';
 import { loginReducer } from 'features/AuthByUsername';
+import { profileReducer } from 'features/EditProfileCard/slice/profileSlice';
 
 import { articleReducer } from 'entities/Article';
-import { profileReducer } from 'entities/Profile';
 
-import { ReducersList } from 'shared/lib/types/reducersList';
+import { ReducersList } from '../../lib/types/reducersList';
 
 const defaultAsyncReducers: ReducersList = {
   login: loginReducer,

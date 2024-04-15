@@ -5,8 +5,8 @@ import { CountrySelect, Country } from 'entities/Country';
 import { Currency, CurrencySelect } from 'entities/Currency';
 
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
+import { TextField } from 'shared/ui/TextField/TextField';
 
 import { Profile } from '../../model/types/profileSchema';
 
@@ -42,7 +42,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
     onChangeCountry,
     onChangeCurrency,
   } = props;
-  const { t } = useTranslation('profile');
+  const { t } = useTranslation('translation');
 
   if (isLoading) {
     return (
@@ -73,7 +73,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
       )}
       <form action="" className={styles.form}>
         <fieldset className={styles.fieldset}>
-          <Input
+          <TextField
             className={styles.input}
             type="text"
             label={t('Имя')}
@@ -81,7 +81,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
             onChange={onChangeFirstname}
             readOnly={readOnly}
           />
-          <Input
+          <TextField
             className={styles.input}
             type="text"
             label={t('Фамилия')}
@@ -89,7 +89,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
             onChange={onChangeLastname}
             readOnly={readOnly}
           />
-          <Input
+          <TextField
             className={styles.input}
             type="number"
             label={t('Возраст')}
@@ -97,7 +97,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
             onChange={onChangeAge}
             readOnly={readOnly}
           />
-          <Input
+          <TextField
             className={styles.input}
             type="text"
             label={t('Аватар')}
@@ -105,7 +105,7 @@ export const ProfileCard = (props: IProfileCardProps) => {
             onChange={onChangeAvatar}
             readOnly={readOnly}
           />
-          <Input
+          <TextField
             className={styles.input}
             type="text"
             label={t('Город')}

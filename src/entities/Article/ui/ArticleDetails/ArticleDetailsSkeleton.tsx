@@ -4,8 +4,8 @@ import styles from './ArticleDetails.module.scss';
 
 export const ArticleDetailsSkeleton = () => {
   return (
-    <div style={{ marginBottom: 24 }}>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <div className={styles.skeleton}>
+      <div className={styles.skeletonHeader}>
         <Skeleton className={styles.avatar} width="200" height="200" variant={SkeletonVariant.CIRCULAR} />
       </div>
       <Skeleton className={styles.title} height="24" />

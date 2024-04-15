@@ -1,6 +1,8 @@
 import { cx } from 'classix';
+import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { Select } from 'shared/ui/Select/Select';
+import { Listbox } from 'shared/ui/Listbox/Listbox';
 
 import { ArticlesOrderField } from '../../model/types/articles';
 
@@ -12,19 +14,23 @@ interface IArticlesOrderProps {
   onOrderChange: (order: ArticlesOrderField) => void;
 }
 
-const options = [
-  {
-    value: ArticlesOrderField.ASC,
-    name: 'По возрастанию',
-  },
-  {
-    value: ArticlesOrderField.DESC,
-    name: 'По убыванию',
-  },
-];
-
 export const ArticlesOrder = (props: IArticlesOrderProps) => {
   const { className, order, onOrderChange } = props;
+  const { t } = useTranslation('translation');
+
+  const options = useMemo(
+    () => [
+      {
+        value: ArticlesOrderField.ASC,
+        name: t('По возрастанию'),
+      },
+      {
+        value: ArticlesOrderField.DESC,
+        name: t('По убыванию'),
+      },
+    ],
+    [t],
+  );
 
   const handleOrderChange = (order: string) => {
     onOrderChange(order as ArticlesOrderField);
@@ -32,7 +38,7 @@ export const ArticlesOrder = (props: IArticlesOrderProps) => {
 
   return (
     <div className={cx(styles.order, className)}>
-      <Select label="Сортировать" options={options} value={order} onChange={handleOrderChange} />
+      <Listbox label={t('Сортировать')} options={options} value={order} onChange={handleOrderChange} />
     </div>
   );
 };

@@ -18,5 +18,7 @@ export const Navbar: Story = {
 
 export const NavbarIsAuth: Story = {
   args: {},
-  decorators: [StoreDecorator({ user: { authData: {} } })],
+  decorators: [
+    StoreDecorator({ user: { authData: { avatar: 'https://upload.wikimedia.org/wikipedia/ru/f/f6/Kirby_FL.png' } } }),
+  ],
 };

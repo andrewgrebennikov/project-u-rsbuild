@@ -1,20 +1,9 @@
 .addCommentForm {
-  display: flex;
-  gap: 0 16px;
-  align-items: center;
-  justify-content: space-between;
-
+  display: grid;
+  gap: 16px 0;
   margin: 0 0 24px;
-  padding: 10px;
-
-  border: 1px solid var(--primary-color);
 }
 
-.inputText,
 .submitButton {
-  min-width: 0;
-}
-
-.inputText {
-  flex-grow: 1;
+  justify-self: flex-start;
 }

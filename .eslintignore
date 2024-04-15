@@ -1,3 +1,4 @@
-/scripts/generate-visual-json-report.js
-/json-server/index.js
+/node_modules
+/dist
+/json-server
 /storybook-static

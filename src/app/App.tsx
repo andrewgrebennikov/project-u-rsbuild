@@ -1,7 +1,6 @@
 import { Suspense, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 
 import { getAuthInited, userActions } from 'entities/User';
@@ -23,10 +22,9 @@ export const App = () => {
   return (
     <div className="app">
       <Suspense fallback={<Loader />}>
-        <Navbar />
-        <div className="app-content">
+        <div className="app__content">
           <Sidebar />
-          {isInited && <AppRouter />}
+          {isInited && <AppRouter className="app__page" />}
         </div>
       </Suspense>
     </div>

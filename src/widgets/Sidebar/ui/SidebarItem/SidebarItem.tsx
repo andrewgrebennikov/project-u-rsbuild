@@ -2,7 +2,7 @@ import { cx } from 'classix';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { useSearchParams } from 'react-router-dom';
+import { NavLink, useSearchParams } from 'react-router-dom';
 
 import { ArticlesCategoriesField, getArticlesCategory } from 'features/ArticlesCategory';
 import { ArticlesOrderField, getArticlesOrder } from 'features/ArticlesOrder';
@@ -10,7 +10,6 @@ import { getArticlesSearch } from 'features/ArticlesSearch';
 import { ArticlesSortField, getArticlesSort } from 'features/ArticlesSort';
 
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { AppLink, AppLinkUnderline } from 'shared/ui/AppLink/AppLink';
 
 import { SidebarItemType } from '../../model/types/sidebarItems';
 
@@ -19,11 +18,10 @@ import styles from './SidebarItem.module.scss';
 interface ISidebarItemProps {
   className?: string;
   item: SidebarItemType;
-  collapsed: boolean;
 }
 
 export const SidebarItem = memo((props: ISidebarItemProps) => {
-  const { className, item, collapsed } = props;
+  const { className, item } = props;
   const { t } = useTranslation('translation');
 
   // start Костыль (позже нужен fix)
@@ -40,26 +38,32 @@ export const SidebarItem = memo((props: ISidebarItemProps) => {
 
   if (item.path === RoutePath.articles()) {
     return (
-      <AppLink
+      <NavLink
         to={{ pathname: item.path, search: searchParams.toString() }}
-        underline={AppLinkUnderline.NONE}
-        className={cx(styles.navLink, className)}
-        startIcon={<item.Icon className="icon" width="30" height="30" />}
+        className={({ isActive }) => cx(styles.navLink, className, isActive && styles.navLinkActive)}
       >
-        {!collapsed && <span className={cx(styles.label)}>{t(item.name)}</span>}
-      </AppLink>
+        {item.Icon && <item.Icon className="icon" width="20" height="20" />}
+        <span className={cx(styles.label)}>{t(item.name)}</span>
+      </NavLink>
     );
   }
   // end Костыль
 
+  if (item.path === RoutePath.create_article()) {
+    return (
+      <NavLink to={item.path} className={cx(styles.navLink, className, styles.navLinkCreate)}>
+        {t(item.name)}
+      </NavLink>
+    );
+  }
+
   return (
-    <AppLink
+    <NavLink
       to={item.path}
-      underline={AppLinkUnderline.NONE}
-      className={cx(styles.navLink, className)}
-      startIcon={<item.Icon className="icon" width="30" height="30" />}
+      className={({ isActive }) => cx(styles.navLink, className, isActive && styles.navLinkActive)}
     >
-      {!collapsed && <span className={cx(styles.label)}>{t(item.name)}</span>}
-    </AppLink>
+      {item.Icon && <item.Icon className="icon" width="20" height="20" />}
+      <span className={cx(styles.label)}>{t(item.name)}</span>
+    </NavLink>
   );
 });

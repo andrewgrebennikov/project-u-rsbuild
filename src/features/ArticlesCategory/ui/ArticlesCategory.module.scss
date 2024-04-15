@@ -9,6 +9,23 @@
   list-style-type: none;
 }
 
+.link {
+  display: inline-flex;
+
+  padding: 4px 29px;
+
+  font-size: 14px;
+  color: var(--category-btn-color);
+  text-decoration: none;
+  vertical-align: top;
+
+  background-color: var(--category-btn-bg);
+  border: 1px solid var(--category-btn-bd-color);
+  border-radius: 5px;
+}
+
 .activeLink {
-  background-color: var(--secondary-color);
+  color: var(--category-btn-color-active);
+  background-color: var(--category-btn-bg-active);
+  border-color: var(--category-btn-bd-color-active);
 }

@@ -11,5 +11,8 @@ export default meta;
 type Story = StoryObj<typeof ArticlesSortComponent>;
 
 export const ArticlesSort: Story = {
-  args: {},
+  args: {
+    sort: 'createdAt',
+    onSortChange: () => {},
+  },
 };

@@ -1,30 +1,28 @@
-# Local
-.DS_Store
-*.local
-*.log*
+# dependencies
+/node_modules
 
-# Dependencies
-node_modules
+# production
+/dist
 
-# Dist
-dist/
-
-# IDE
-.vscode/*
-!.vscode/extensions.json
+# ide
 .idea
 
-# Storybook
+# storybook
 /storybook-static
+*storybook.log
+build-storybook.log
 
-# Loki
-.loki/report.html
-.loki/report.json
+# chromatic
+chromatic.log
+chromatic-build-*.xml
+chromatic-diagnostics.json
 
-# Ignore auto generated CSS declarations
-*.module.css.d.ts
-*.module.sass.d.ts
-*.module.scss.d.ts
-*.module.less.d.ts
-*.module.styl.d.ts
-*.module.stylus.d.ts
+# jest
+/jest-html-report
+
+# env
+.env
+.env.production
+
+# swc
+.swc

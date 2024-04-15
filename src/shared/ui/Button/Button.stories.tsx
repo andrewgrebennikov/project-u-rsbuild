@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import IconArrowRight from '../../assets/icons/icon-arrow-right.svg';
+import IconCopy from '../../assets/icons/icon-copy.svg';
 
 import { Button, ButtonVariant } from './Button';
 
@@ -37,7 +37,7 @@ export const StartIcon: Story = {
   args: {
     children: 'Text',
     variant: ButtonVariant.TEXT,
-    startIcon: <IconArrowRight className="icon" width="30" height="30" />,
+    startIcon: <IconCopy className="icon" width="20" height="20" />,
   },
 };
 
@@ -45,7 +45,13 @@ export const EndIcon: Story = {
   args: {
     children: 'Text',
     variant: ButtonVariant.TEXT,
-    endIcon: <IconArrowRight className="icon" width="30" height="30" />,
+    endIcon: <IconCopy className="icon" width="20" height="20" />,
+  },
+};
+
+export const OnlyIcon: Story = {
+  args: {
+    children: <IconCopy className="icon" width="20" height="20" />,
   },
 };
 

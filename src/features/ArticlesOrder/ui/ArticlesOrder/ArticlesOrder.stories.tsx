@@ -11,5 +11,8 @@ export default meta;
 type Story = StoryObj<typeof ArticlesOrderComponent>;
 
 export const ArticlesOrder: Story = {
-  args: {},
+  args: {
+    order: 'asc',
+    onOrderChange: () => {},
+  },
 };

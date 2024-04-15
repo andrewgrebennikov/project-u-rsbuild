@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { NotFound as NotFoundComponent } from './NotFound';
+import { default as NotFoundComponent } from './NotFound';
 
 const meta: Meta<typeof NotFoundComponent> = {
   title: 'pages/NotFound',

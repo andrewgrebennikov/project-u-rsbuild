@@ -1,9 +1,11 @@
 .navbar {
   display: flex;
-  gap: 16px;
+  gap: 0 24px;
   justify-content: flex-end;
+  padding: 16px 40px;
+}
 
-  padding: 16px;
-
-  background-color: var(--secondary-color);
+.themeSwitcher,
+.langSwitcher {
+  padding: 5px;
 }

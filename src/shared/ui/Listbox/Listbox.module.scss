@@ -1,0 +1,99 @@
+.field {
+  position: relative;
+  display: block;
+}
+
+.label {
+  display: inline-flex;
+
+  margin: 0 0 4px;
+
+  font-size: 12px;
+  color: var(--label-color);
+  vertical-align: top;
+}
+
+.button {
+  cursor: pointer;
+
+  display: block;
+
+  width: 100%;
+  padding: 12px 24px;
+
+  font-size: 14px;
+  text-align: left;
+
+  appearance: none;
+  background-color: var(--input-bg);
+  border: 0;
+  border-radius: 5px;
+
+  &:focus-visible {
+    background-color: var(--input-bg-active);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.buttonActive {
+  background-color: var(--input-bg-active);
+  border-radius: 5px 5px 0 0;
+}
+
+.options {
+  position: absolute;
+  z-index: 1;
+
+  overflow: auto;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+}
+
+.option {
+  cursor: pointer;
+  padding: 12px 24px;
+  font-size: 14px;
+  background-color: var(--input-bg);
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--input-bg-active);
+  }
+}
+
+.optionActive {
+  background-color: var(--input-bg-active);
+}
+
+.enter {
+  transition: opacity 300ms;
+}
+
+.enterFrom {
+  opacity: 0;
+}
+
+.enterTo {
+  opacity: 1;
+}
+
+.leave {
+  transition: opacity 300ms;
+}
+
+.leaveFrom {
+  opacity: 1;
+}
+
+.leaveTo {
+  opacity: 0;
+}

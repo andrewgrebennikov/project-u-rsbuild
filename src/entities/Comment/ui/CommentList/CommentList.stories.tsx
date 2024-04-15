@@ -15,7 +15,7 @@ export const CommentList: Story = {
     comments: [
       {
         id: '1',
-        user: { id: '1', avatar: 'https://upload.wikimedia.org/wikipedia/ru/f/f6/Kirby_FL.png', username: 'admin' },
+        user: { id: '1', avatar: 'https://upload.wikimedia.org/wikipedia/ru/f/f6/Kirby_FL.png', username: 'Admin' },
         text: 'Text',
       },
       {
@@ -23,7 +23,7 @@ export const CommentList: Story = {
         user: {
           id: '2',
           avatar: 'https://voronpitomnik.ru/assets/images/5f381798-79bb-4639-bdea-eb27f5a846d7.JPG',
-          username: 'user',
+          username: 'User',
         },
         text: 'Text 2',
       },

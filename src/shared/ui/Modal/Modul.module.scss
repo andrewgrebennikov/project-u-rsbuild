@@ -1,46 +1,58 @@
-.modal {
-  position: fixed;
-  z-index: 100;
-  inset: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.dialog {
+  position: relative;
+  z-index: 10;
 }
 
-.open {
-  animation-name: show;
-  animation-duration: 0.3s;
+.overlay,
+.modal {
+  position: fixed;
+  inset: 0;
 }
 
 .overlay {
-  position: fixed;
-  z-index: -1;
-  inset: 0;
   background-color: rgba(0 0 0 / 60%);
 }
 
-.content {
+.modal {
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-
-  max-height: calc(100% - 64px);
-  margin: 32px;
-  padding: 16px;
-
-  color: black;
-
-  background-color: var(--secondary-color);
-  border-radius: 4px;
 }
 
-@keyframes show {
-  from {
-    opacity: 0;
-  }
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  to {
-    opacity: 1;
-  }
+  min-height: 100%;
+  padding: 16px;
+}
+
+.panel {
+  padding: 16px;
+  color: black;
+  background-color: var(--modal-bg);
+  border-radius: 5px;
+}
+
+.enter {
+  transition: opacity 300ms;
+}
+
+.enterFrom {
+  opacity: 0;
+}
+
+.enterTo {
+  opacity: 1;
+}
+
+.leave {
+  transition: opacity 300ms;
+}
+
+.leaveFrom {
+  opacity: 1;
+}
+
+.leaveTo {
+  opacity: 0;
 }

@@ -7,10 +7,10 @@
 }
 
 .articlesView {
-  align-self: center;
-  justify-content: flex-end;
+  place-self: flex-end flex-end;
 }
 
-.articlesSearch {
+.articlesSearch,
+.articlesCategory {
   grid-column: 1 / -1;
 }

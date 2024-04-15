@@ -1,4 +1,5 @@
 {
+  "plugins": ["prettier-plugin-sort-json"],
   "semi": true,
   "singleQuote": true,
   "trailingComma": "all",

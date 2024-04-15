@@ -99,7 +99,11 @@ export const Filters = (props: IFiltersProps) => {
       <ArticlesOrder onOrderChange={handleOrderChange} order={order} />
       <ArticlesViewSelector className={styles.articlesView} view={view} onViewChange={handleViewChange} />
       <ArticlesSearch className={styles.articlesSearch} search={search} onSearchChange={handleSearchChange} />
-      <ArticlesCategory category={category} onCategoryChange={handleCategoryChange} />
+      <ArticlesCategory
+        className={styles.articlesCategory}
+        category={category}
+        onCategoryChange={handleCategoryChange}
+      />
     </div>
   );
 };
