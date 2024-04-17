@@ -11,7 +11,7 @@ interface ArticleListItemSkeletonProps {
   view?: ArticlesView;
 }
 
-export const ArticleListItemSkeleton = (props: ArticleListItemSkeletonProps) => {
+export const ArticlesListItemSkeleton = (props: ArticleListItemSkeletonProps) => {
   const { className, view } = props;
 
   if (view === ArticlesView.GRID) {

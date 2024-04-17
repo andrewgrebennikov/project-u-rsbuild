@@ -1,22 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
+import { NotificationsButton as NotificationsButtonComponent } from './NotificationsButton';
 
-import { Navbar as NavbarComponent } from './Navbar';
-
-const meta: Meta<typeof NavbarComponent> = {
-  title: 'widget/Navbar',
-  component: NavbarComponent,
+const meta: Meta<typeof NotificationsButtonComponent> = {
+  title: 'features/NotificationsButton',
+  component: NotificationsButtonComponent,
 };
 
 export default meta;
-type Story = StoryObj<typeof NavbarComponent>;
+type Story = StoryObj<typeof NotificationsButtonComponent>;
 
-export const Navbar: Story = {
-  args: {},
-};
-
-export const NavbarIsAuth: Story = {
+export const NotificationsButton: Story = {
   args: {},
   parameters: {
     mockData: [
@@ -61,7 +55,4 @@ export const NavbarIsAuth: Story = {
       },
     ],
   },
-  decorators: [
-    StoreDecorator({ user: { authData: { avatar: 'https://upload.wikimedia.org/wikipedia/ru/f/f6/Kirby_FL.png' } } }),
-  ],
 };

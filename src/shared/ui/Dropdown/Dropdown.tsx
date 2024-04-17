@@ -1,4 +1,5 @@
 import { Menu, Transition } from '@headlessui/react';
+import { cx } from 'classix';
 import { Fragment, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -12,17 +13,18 @@ interface IDropdownItemProps {
 }
 
 interface IDropdownProps {
-  button: ReactNode;
+  buttonContent: ReactNode;
   items: IDropdownItemProps[];
+  className?: string;
 }
 
 export const Dropdown = (props: IDropdownProps) => {
-  const { button, items } = props;
+  const { buttonContent, items, className } = props;
 
   return (
-    <div className={styles.dropdown}>
+    <div className={cx(styles.dropdown, className)}>
       <Menu>
-        <Menu.Button className={styles.button}>{button}</Menu.Button>
+        <Menu.Button className={styles.button}>{buttonContent}</Menu.Button>
         <Transition
           as={Fragment}
           enter={styles.enter}

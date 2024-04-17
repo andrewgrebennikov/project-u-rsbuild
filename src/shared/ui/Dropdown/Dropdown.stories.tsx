@@ -14,7 +14,7 @@ type Story = StoryObj<typeof DropdownComponent>;
 
 export const Dropdown: Story = {
   args: {
-    button: <Button variant={ButtonVariant.CONTAINED}>Профиль</Button>,
+    buttonContent: <Button variant={ButtonVariant.CONTAINED}>Профиль</Button>,
     items: [
       { id: '1', label: 'Профиль' },
       { id: '2', label: 'Выйти' },

@@ -1,0 +1,12 @@
+.list {
+  overflow: auto;
+  display: grid;
+  gap: 16px 0;
+
+  width: 336px;
+  height: 228px;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}

@@ -7,8 +7,8 @@ import { useTranslation } from 'react-i18next';
 import { ArticlesView } from 'features/ArticlesViewSelector';
 
 import { Article } from '../../model/types/article';
-import { ArticleListItemSkeleton } from '../ArticlesListItem/ArticleListItemSkeleton';
 import { ArticlesListItem } from '../ArticlesListItem/ArticlesListItem';
+import { ArticlesListItemSkeleton } from '../ArticlesListItem/ArticlesListItemSkeleton';
 
 import styles from './ArticlesList.module.scss';
 
@@ -23,7 +23,7 @@ interface IArticlesListProps {
 
 const getSkeletons = (view: ArticlesView) => {
   return Array.from(Array(5).keys()).map((_, index) => {
-    return <ArticleListItemSkeleton key={index} view={view} />;
+    return <ArticlesListItemSkeleton key={index} view={view} />;
   });
 };
 

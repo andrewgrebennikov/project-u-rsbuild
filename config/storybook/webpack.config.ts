@@ -1,6 +1,8 @@
 import { RuleSetRule, Configuration, DefinePlugin } from 'webpack';
 
 export default ({ config }: { config: Configuration }) => {
+  const isDev = config.mode === 'development';
+
   config.plugins!.push(
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(true),
@@ -29,7 +31,19 @@ export default ({ config }: { config: Configuration }) => {
 
   config.module!.rules.push({
     test: /\.s[ac]ss$/i,
-    use: ['style-loader', 'css-loader', 'sass-loader'],
+    use: [
+      'style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          modules: {
+            auto: (resourcePath: string) => resourcePath.includes('.module.'),
+            localIdentName: isDev ? '[name]__[local]' : '[hash:base64:8]',
+          },
+        },
+      },
+      'sass-loader',
+    ],
   });
 
   return config;

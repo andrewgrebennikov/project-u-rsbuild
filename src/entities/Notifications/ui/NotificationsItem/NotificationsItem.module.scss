@@ -1,0 +1,65 @@
+.notification {
+  --border-radius: 7px;
+
+  position: relative;
+
+  display: grid;
+  gap: 8px 0;
+
+  padding: 12px;
+
+  background-color: var(--notification-bg);
+  border-radius: var(--border-radius);
+}
+
+.title {
+  position: relative;
+
+  margin: 0;
+  padding: 0 0 0 14px;
+
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--notification-color);
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: var(--notification-label-bg);
+    border-radius: 50%;
+  }
+}
+
+.description {
+  margin: 0;
+  font-size: var(--font-size-md);
+  color: var(--notification-color);
+}
+
+.link {
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::before {
+      outline-style: auto;
+      outline-width: 1px;
+      outline-offset: -1px;
+    }
+  }
+}
