@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ArticleBlockType, ArticleType } from 'entities/Article';
+import { ArticleBlockType, ArticleType } from '@/entities/Article';
 
 import { ArticleRecommendation as ArticleRecommendationComponent } from './ArticleRecommendation';
 

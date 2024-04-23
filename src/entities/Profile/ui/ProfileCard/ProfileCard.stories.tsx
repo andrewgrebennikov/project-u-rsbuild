@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { country } from 'entities/Country';
-import { currency } from 'entities/Currency';
+import { country } from '@/entities/Country';
+import { currency } from '@/entities/Currency';
 
 import { ProfileCard as ProfileCardComponent } from './ProfileCard';
 

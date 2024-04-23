@@ -2,11 +2,11 @@ import { Suspense, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
-import { AddCommentForm } from 'features/AddCommentForm';
+import { AddCommentForm } from '@/features/AddCommentForm';
 
-import { CommentList } from 'entities/Comment';
+import { CommentList } from '@/entities/Comment';
 
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 
 import { getArticleDetailsCommentsIsLoading } from '../../model/selectors/getArticleDetailsCommentsIsLoading/getArticleDetailsCommentsIsLoading';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';

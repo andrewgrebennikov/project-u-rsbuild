@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useMemo, useState } from 'react';
 
-import { THEME_LOCAL_STORAGE_KEY } from 'shared/consts/localStorage';
+import { THEME_LOCAL_STORAGE_KEY } from '@/shared/consts/localStorage';
 
 import { Theme, ThemeContext } from '../lib/ThemeContex';
 

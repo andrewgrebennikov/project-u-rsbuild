@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ArticleBlockType, ArticleType } from 'entities/Article';
+import { ArticleBlockType, ArticleType } from '@/entities/Article';
 
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 
 import { ArticleDetailsPageLazy } from './ArticleDetailsPageLazy';
 

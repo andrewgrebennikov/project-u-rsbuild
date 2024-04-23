@@ -1,17 +1,17 @@
 import { RouteProps } from 'react-router-dom';
 
-import { AboutPage } from 'pages/AboutPage';
-import { AdminPage } from 'pages/AdminPage';
-import { ArticleDetailsEditPage } from 'pages/ArticleDetailsEditPage';
-import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
-import { ArticlesPage } from 'pages/ArticlesPage';
-import { CreateArticlePage } from 'pages/CreateArticlePage';
-import { ForbiddenPage } from 'pages/ForbiddenPage';
-import { MainPage } from 'pages/MainPage';
-import { NotFound } from 'pages/NotFound';
-import { ProfilePage } from 'pages/ProfilePage';
+import { AboutPage } from '@/pages/AboutPage';
+import { AdminPage } from '@/pages/AdminPage';
+import { ArticleDetailsEditPage } from '@/pages/ArticleDetailsEditPage';
+import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
+import { ArticlesPage } from '@/pages/ArticlesPage';
+import { CreateArticlePage } from '@/pages/CreateArticlePage';
+import { ForbiddenPage } from '@/pages/ForbiddenPage';
+import { MainPage } from '@/pages/MainPage';
+import { NotFound } from '@/pages/NotFound';
+import { ProfilePage } from '@/pages/ProfilePage';
 
-import { UserRole } from 'entities/User';
+import { UserRole } from '@/entities/User';
 
 import { ValueOf } from '../../lib/types/valueOf';
 

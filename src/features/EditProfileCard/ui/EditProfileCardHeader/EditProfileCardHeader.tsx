@@ -2,9 +2,9 @@ import { cx } from 'classix';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
-import { getAuthData } from 'entities/User';
+import { getAuthData } from '@/entities/User';
 
-import { Button } from 'shared/ui/Button/Button';
+import { Button } from '@/shared/ui/Button/Button';
 
 import { getProfileFormData } from '../../selectors/getProfileFormData/getProfileFormData';
 

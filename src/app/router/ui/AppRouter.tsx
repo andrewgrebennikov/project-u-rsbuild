@@ -1,10 +1,10 @@
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { Navbar } from 'widgets/Navbar';
+import { Navbar } from '@/widgets/Navbar';
 
-import { routeConfig } from 'shared/config/routeConfig/routeConfig';
-import { Loader } from 'shared/ui/Loader/Loader';
+import { routeConfig } from '@/shared/config/routeConfig/routeConfig';
+import { Loader } from '@/shared/ui/Loader/Loader';
 
 import { RequireAuth } from '../ui/RequireAuth';
 

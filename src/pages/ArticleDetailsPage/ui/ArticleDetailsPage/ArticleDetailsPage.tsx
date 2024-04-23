@@ -2,15 +2,16 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 
-import { Page } from 'widgets/Page/Page';
+import { Page } from '@/widgets/Page/Page';
 
-import { ArticleRecommendation } from 'features/ArticlesRecomendation';
+import { ArticleRating } from '@/features/ArticleRating';
+import { ArticleRecommendation } from '@/features/ArticlesRecomendation';
 
-import { ArticleDetails } from 'entities/Article';
+import { ArticleDetails } from '@/entities/Article';
 
-import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { ReducersList } from 'shared/lib/types/reducersList';
+import { DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { ReducersList } from '@/shared/lib/types/reducersList';
 
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { articleDetailsCommentsReducer } from '../../model/slice/articleDetailsCommentsSlice';
@@ -42,6 +43,7 @@ const ArticleDetailsPage = () => {
         <ArticleDetailsHeader articleId={articleId} />
         <ArticleDetails articleId={articleId} />
         <ArticleRecommendation />
+        <ArticleRating articleId={articleId} />
         <ArticleDetailsComments articleId={articleId} />
       </Page>
     </DynamicModuleLoader>

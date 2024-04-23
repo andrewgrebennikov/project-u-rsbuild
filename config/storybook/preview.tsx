@@ -1,11 +1,12 @@
 import { Preview } from '@storybook/react';
 
-import { Theme } from '../../src/app/providers/ThemeProvider';
-import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator';
-import { StoreDecorator } from '../../src/shared/config/storybook/StoreDecorator';
-import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator';
-import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator';
-import { TranslationDecorator } from '../../src/shared/config/storybook/TranslationDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+
+import { RouterDecorator } from '@/shared/config/storybook/RouterDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { TranslationDecorator } from '@/shared/config/storybook/TranslationDecorator';
 
 const preview: Preview = {
   globalTypes: {

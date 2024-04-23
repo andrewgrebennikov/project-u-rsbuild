@@ -1,12 +1,12 @@
 import { cx } from 'classix';
 import { useTranslation } from 'react-i18next';
 
-import { CountrySelect, Country } from 'entities/Country';
-import { Currency, CurrencySelect } from 'entities/Currency';
+import { CountrySelect, Country } from '@/entities/Country';
+import { Currency, CurrencySelect } from '@/entities/Currency';
 
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Loader } from 'shared/ui/Loader/Loader';
-import { TextField } from 'shared/ui/TextField/TextField';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Loader } from '@/shared/ui/Loader/Loader';
+import { TextField } from '@/shared/ui/TextField/TextField';
 
 import { Profile } from '../../model/types/profileSchema';
 

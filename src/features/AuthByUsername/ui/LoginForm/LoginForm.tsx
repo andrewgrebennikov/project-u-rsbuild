@@ -3,11 +3,11 @@ import { memo, SyntheticEvent, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
-import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { ReducersList } from 'shared/lib/types/reducersList';
-import { Button } from 'shared/ui/Button/Button';
-import { TextField } from 'shared/ui/TextField/TextField';
+import { DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { ReducersList } from '@/shared/lib/types/reducersList';
+import { Button } from '@/shared/ui/Button/Button';
+import { TextField } from '@/shared/ui/TextField/TextField';
 
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';

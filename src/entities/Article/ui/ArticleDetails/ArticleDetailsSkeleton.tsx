@@ -1,4 +1,4 @@
-import { Skeleton, SkeletonVariant } from 'shared/ui/Skeleton/Skeleton';
+import { Skeleton, SkeletonVariant } from '@/shared/ui/Skeleton/Skeleton';
 
 import styles from './ArticleDetails.module.scss';
 

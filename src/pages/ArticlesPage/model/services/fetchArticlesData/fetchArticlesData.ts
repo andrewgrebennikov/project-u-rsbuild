@@ -1,13 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { ThunkConfig } from 'app/providers/StoreProvider';
+import { ThunkConfig } from '@/app/providers/StoreProvider';
 
-import { ArticlesCategoriesField, getArticlesCategory } from 'features/ArticlesCategory';
-import { getArticlesOrder } from 'features/ArticlesOrder';
-import { getArticlesSearch } from 'features/ArticlesSearch';
-import { getArticlesSort } from 'features/ArticlesSort';
+import { ArticlesCategoriesField, getArticlesCategory } from '@/features/ArticlesCategory';
+import { getArticlesOrder } from '@/features/ArticlesOrder';
+import { getArticlesSearch } from '@/features/ArticlesSearch';
+import { getArticlesSort } from '@/features/ArticlesSort';
 
-import { Article } from 'entities/Article';
+import { Article } from '@/entities/Article';
 
 import { getArticlesLimit } from '../../selectors/getArticlesLimit/getArticlesLimit';
 import { getArticlesPage } from '../../selectors/getArticlesPage/getArticlesPage';

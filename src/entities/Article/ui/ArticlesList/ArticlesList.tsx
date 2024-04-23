@@ -4,7 +4,7 @@ import { cx } from 'classix';
 import { HTMLAttributeAnchorTarget } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { ArticlesView } from 'features/ArticlesViewSelector';
+import { ArticlesView } from '@/features/ArticlesViewSelector';
 
 import { Article } from '../../model/types/article';
 import { ArticlesListItem } from '../ArticlesListItem/ArticlesListItem';

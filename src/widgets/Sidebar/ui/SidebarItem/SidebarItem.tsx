@@ -4,12 +4,12 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { NavLink, useSearchParams } from 'react-router-dom';
 
-import { ArticlesCategoriesField, getArticlesCategory } from 'features/ArticlesCategory';
-import { ArticlesOrderField, getArticlesOrder } from 'features/ArticlesOrder';
-import { getArticlesSearch } from 'features/ArticlesSearch';
-import { ArticlesSortField, getArticlesSort } from 'features/ArticlesSort';
+import { ArticlesCategoriesField, getArticlesCategory } from '@/features/ArticlesCategory';
+import { ArticlesOrderField, getArticlesOrder } from '@/features/ArticlesOrder';
+import { getArticlesSearch } from '@/features/ArticlesSearch';
+import { ArticlesSortField, getArticlesSort } from '@/features/ArticlesSort';
 
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 
 import { SidebarItemType } from '../../model/types/sidebarItems';
 

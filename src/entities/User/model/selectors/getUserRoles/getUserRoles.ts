@@ -1,6 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
 
-import { StoreSchema } from 'app/providers/StoreProvider/types/storeSchema';
+import { StoreSchema } from '@/app/providers/StoreProvider/types/storeSchema';
 
 import { UserRole } from '../../types/userSchema';
 

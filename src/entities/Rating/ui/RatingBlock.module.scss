@@ -1,0 +1,24 @@
+.ratingBlock {
+  display: grid;
+  justify-items: center;
+  margin: 0 0 32px;
+}
+
+.modal {
+  min-width: 320px;
+}
+
+.title,
+.feedbackTitle,
+.input {
+  margin: 0 0 16px;
+}
+
+.feedbackTitle {
+  color: var(--primary-color);
+}
+
+.actions {
+  display: flex;
+  gap: 0 16px;
+}

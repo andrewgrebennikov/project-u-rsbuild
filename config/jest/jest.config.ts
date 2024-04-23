@@ -1,4 +1,10 @@
+import path from 'path';
+
 import type { Config } from 'jest';
+
+const paths = {
+  rootDir: path.resolve(__dirname, '..', '..'),
+};
 
 const jestConfig: Config = {
   clearMocks: true,
@@ -9,15 +15,15 @@ const jestConfig: Config = {
     __API__: '',
     __PROJECT__: 'jest',
   },
-  moduleDirectories: ['node_modules'],
+  moduleDirectories: ['<rootDir>/node_modules', '<rootDir>/src'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
   moduleNameMapper: {
-    'entities/(.*)': '<rootDir>/src/entities/$1',
     '\\.(css|scss)$': 'identity-obj-proxy',
     '\\.svg$': '<rootDir>/config/jest/svgMock.tsx',
+    '@/(.*)': '<rootDir>/src/$1',
   },
   modulePaths: ['<rootDir>/src'],
-  rootDir: '../../',
+  rootDir: paths.rootDir,
   setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
   testEnvironment: 'jsdom',
   testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[tj]s?(x)'],

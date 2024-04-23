@@ -1,9 +1,9 @@
 import { cx } from 'classix';
 import { useTranslation } from 'react-i18next';
 
-import { ArticlesView } from 'features/ArticlesViewSelector';
+import { ArticlesView } from '@/features/ArticlesViewSelector';
 
-import { ArticlesList } from 'entities/Article';
+import { ArticlesList } from '@/entities/Article';
 
 import { useArticleRecommendationList } from '../api/articleRecommendationApi';
 

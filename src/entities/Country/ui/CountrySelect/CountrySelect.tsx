@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Listbox } from 'shared/ui/Listbox/Listbox';
+import { Listbox } from '@/shared/ui/Listbox/Listbox';
 
 import { Country, country } from '../../model/types/countrySchema';
 

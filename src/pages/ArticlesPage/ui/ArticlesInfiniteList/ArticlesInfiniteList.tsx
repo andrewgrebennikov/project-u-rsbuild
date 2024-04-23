@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 
-import { getArticlesView } from 'features/ArticlesViewSelector';
+import { getArticlesView } from '@/features/ArticlesViewSelector';
 
-import { ArticlesList } from 'entities/Article';
+import { ArticlesList } from '@/entities/Article';
 
 import { getArticlesError } from '../../model/selectors/getArticlesError/getArticlesError';
 import { getArticles } from '../../model/slice/articlesSlice';

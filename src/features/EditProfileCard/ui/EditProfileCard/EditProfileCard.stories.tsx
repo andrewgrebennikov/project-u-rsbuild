@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { country } from 'entities/Country';
-import { currency } from 'entities/Currency';
+import { country } from '@/entities/Country';
+import { currency } from '@/entities/Currency';
 
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 
 import { EditProfileCard as EditProfileCardComponent } from './EditProfileCard';
 

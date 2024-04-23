@@ -1,8 +1,8 @@
 import { cx } from 'classix';
 
-import { ArticlesView } from 'features/ArticlesViewSelector';
+import { ArticlesView } from '@/features/ArticlesViewSelector';
 
-import { Skeleton, SkeletonVariant } from 'shared/ui/Skeleton/Skeleton';
+import { Skeleton, SkeletonVariant } from '@/shared/ui/Skeleton/Skeleton';
 
 import styles from './ArticlesListItem.module.scss';
 

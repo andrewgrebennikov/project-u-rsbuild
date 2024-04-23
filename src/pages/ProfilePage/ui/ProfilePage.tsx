@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 
-import { Page } from 'widgets/Page/Page';
+import { Page } from '@/widgets/Page/Page';
 
-import { EditProfileCard } from 'features/EditProfileCard';
+import { EditProfileCard } from '@/features/EditProfileCard';
 
 const ProfilePage = () => {
   const { id: profileId } = useParams();

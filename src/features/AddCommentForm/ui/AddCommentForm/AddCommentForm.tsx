@@ -3,11 +3,11 @@ import { SyntheticEvent, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
-import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { ReducersList } from 'shared/lib/types/reducersList';
-import { Button, ButtonVariant } from 'shared/ui/Button/Button';
-import { TextField } from 'shared/ui/TextField/TextField';
+import { DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { ReducersList } from '@/shared/lib/types/reducersList';
+import { Button, ButtonVariant } from '@/shared/ui/Button/Button';
+import { TextField } from '@/shared/ui/TextField/TextField';
 
 import { getCommentFormIsLoading } from '../../model/selectors/getCommentFormIsLoading/getCommentFormIsLoading';
 import { getCommentFormText } from '../../model/selectors/getCommentFormText/getCommentFormText';
@@ -46,7 +46,7 @@ const AddCommentForm = (props: ICommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
-      <h2>{t('Оставить комментарий')}</h2>
+      <h2 className={styles.title}>{t('Оставить комментарий')}</h2>
       <form className={cx(styles.addCommentForm, className)} onSubmit={handleCommentFormSubmit}>
         <TextField
           className={styles.inputText}

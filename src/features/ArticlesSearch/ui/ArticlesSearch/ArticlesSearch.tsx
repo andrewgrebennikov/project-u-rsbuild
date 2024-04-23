@@ -1,7 +1,7 @@
 import { cx } from 'classix';
 import { useTranslation } from 'react-i18next';
 
-import { SearchField } from 'shared/ui/SearchField/SearchField';
+import { SearchField } from '@/shared/ui/SearchField/SearchField';
 
 import styles from './ArticlesSearch.module.scss';
 

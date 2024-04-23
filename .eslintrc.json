@@ -23,9 +23,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/src/**/*.test.{ts,tsx}"
-      ],
+      "files": ["**/src/**/*.test.{ts,tsx}"],
       "rules": {
         "i18next/no-literal-string": "off"
       }
@@ -36,12 +34,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "import",
-    "prettier"
-  ],
+  "plugins": ["react", "@typescript-eslint", "import", "prettier"],
   "rules": {
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
@@ -55,32 +48,25 @@
         "alphabetize": {
           "order": "asc"
         },
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ],
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
         "pathGroups": [
           {
-            "pattern": "widgets/**",
+            "pattern": "@/widgets/**",
             "group": "internal",
             "position": "after"
           },
           {
-            "pattern": "features/**",
+            "pattern": "@/features/**",
             "group": "internal",
             "position": "after"
           },
           {
-            "pattern": "entities/**",
+            "pattern": "@/entities/**",
             "group": "internal",
             "position": "after"
           },
           {
-            "pattern": "shared/**",
+            "pattern": "@/shared/**",
             "group": "internal",
             "position": "after"
           }

@@ -1,13 +1,13 @@
 import { useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import { ProfileCard } from 'entities/Profile';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { ProfileCard } from '@/entities/Profile';
 
-import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { ReducersList } from 'shared/lib/types/reducersList';
+import { DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { ReducersList } from '@/shared/lib/types/reducersList';
 
 import { getProfileError } from '../../selectors/getProfileError/getProfileError';
 import { getProfileFormData } from '../../selectors/getProfileFormData/getProfileFormData';

@@ -1,4 +1,20 @@
 {
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 1,
+      "feedback": "Плохая статья",
+      "userId": "1",
+      "articleId": "2"
+    }
+  ],
   "articles": [
     {
       "id": "1",

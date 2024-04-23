@@ -2,12 +2,12 @@ import { cx } from 'classix';
 import { HTMLAttributeAnchorTarget } from 'react';
 import { Link } from 'react-router-dom';
 
-import { ArticlesView } from 'features/ArticlesViewSelector';
+import { ArticlesView } from '@/features/ArticlesViewSelector';
 
-import IconEye from 'shared/assets/icons/icon-eye.svg';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Button, ButtonVariant } from 'shared/ui/Button/Button';
+import IconEye from '@/shared/assets/icons/icon-eye.svg';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Button, ButtonVariant } from '@/shared/ui/Button/Button';
 
 import { Article, ArticleBlockType, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';

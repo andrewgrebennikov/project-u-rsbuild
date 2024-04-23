@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ArticlesView } from 'features/ArticlesViewSelector';
+import { ArticlesView } from '@/features/ArticlesViewSelector';
 
 import { Article } from '../../model/types/article';
 

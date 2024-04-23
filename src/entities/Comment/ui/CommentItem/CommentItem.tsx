@@ -1,8 +1,8 @@
 import { cx } from 'classix';
 import { Link } from 'react-router-dom';
 
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
 
 import { Comment } from '../../model/types/comment';
 

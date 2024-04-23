@@ -1,0 +1,68 @@
+.rating {
+  position: relative;
+  display: inline-flex;
+  vertical-align: top;
+
+  &:hover {
+    svg {
+      fill: currentcolor;
+    }
+  }
+}
+
+.input {
+  pointer-events: none;
+
+  position: absolute;
+  z-index: -1;
+
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+  clip: rect(0 0 0 0);
+
+  &:checked {
+    & + .label {
+      svg {
+        fill: currentcolor;
+      }
+    }
+  }
+}
+
+/* stylelint-disable */
+
+.label {
+  cursor: pointer;
+
+  svg {
+    fill: transparent;
+  }
+
+  &:hover {
+    svg {
+      fill: currentcolor;
+    }
+
+    & ~ .label {
+      svg {
+        fill: transparent;
+      }
+    }
+  }
+}
+
+.selected {
+  svg {
+    fill: currentcolor;
+  }
+}
+
+/* stylelint-enable */
+
+.disabled {
+  pointer-events: none;
+}

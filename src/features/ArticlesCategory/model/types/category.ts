@@ -1,4 +1,4 @@
-import { ValueOf } from 'shared/lib/types/valueOf';
+import { ValueOf } from '@/shared/lib/types/valueOf';
 
 export const ArticlesCategoriesField = {
   ALL: 'All',

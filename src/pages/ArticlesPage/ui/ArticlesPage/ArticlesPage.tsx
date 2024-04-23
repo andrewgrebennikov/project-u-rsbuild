@@ -2,12 +2,12 @@ import { useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 
-import { Filters } from 'widgets/Filters/intex';
-import { Page } from 'widgets/Page/Page';
+import { Filters } from '@/widgets/Filters/intex';
+import { Page } from '@/widgets/Page/Page';
 
-import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { ReducersList } from 'shared/lib/types/reducersList';
+import { DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { ReducersList } from '@/shared/lib/types/reducersList';
 
 import { getArticlesIsLoading } from '../../model/selectors/getArticlesIsLoading/getArticlesIsLoading';
 import { fetchArticlesMore } from '../../model/services/fetchArticlesMore/fetchArticlesMore';
