@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
 import { RatingBlock } from '@/entities/Rating';
@@ -8,17 +9,19 @@ import { useArticleRating, useRateArticle } from '../api/articleRatingApi';
 
 export interface IArticleRatingProps {
   className?: string;
-  title?: string;
-  feedbackTitle?: string;
-  hasFeedback?: boolean;
   articleId: string | undefined;
 }
 
 const ArticleRating = (props: IArticleRatingProps) => {
-  const { title, feedbackTitle, hasFeedback, articleId } = props;
+  const { articleId } = props;
+  const { t } = useTranslation('translation');
   const authData = useSelector(getAuthData);
 
-  const { data: articleRating, isLoading } = useArticleRating({ articleId, userId: authData?.id });
+  const {
+    data: articleRating,
+    isLoading,
+    refetch: refetchArticleRating,
+  } = useArticleRating({ articleId, userId: authData?.id });
   const rating = articleRating?.[0]?.rate;
 
   const [rateArticleMutation] = useRateArticle();
@@ -27,11 +30,12 @@ const ArticleRating = (props: IArticleRatingProps) => {
     (rate: number | undefined, feedback?: string) => {
       try {
         rateArticleMutation({ articleId, userId: authData?.id, rate, feedback });
+        refetchArticleRating();
       } catch (error) {
         console.log(error);
       }
     },
-    [articleId, authData?.id, rateArticleMutation],
+    [articleId, authData?.id, rateArticleMutation, refetchArticleRating],
   );
 
   const handleAccept = useCallback(
@@ -54,12 +58,12 @@ const ArticleRating = (props: IArticleRatingProps) => {
 
   return (
     <RatingBlock
-      title={title}
-      feedbackTitle={feedbackTitle}
-      hasFeedback={hasFeedback}
+      title={t('Оцените статью')}
+      feedbackTitle={t('Оставьте свой отзыв о статье')}
       rating={rating}
       onAccept={handleAccept}
       onCancel={handleCancel}
+      hasFeedback
     />
   );
 };
