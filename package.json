@@ -80,8 +80,6 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-html-reporters": "^3.1.7",
     "json-server": "^0.17.4",
-    "msw": "^2.2.14",
-    "msw-storybook-addon": "^2.0.0",
     "prettier": "^3.2.5",
     "prettier-plugin-sort-json": "^4.0.0",
     "sass": "^1.75.0",
@@ -98,10 +96,5 @@
   },
   "volta": {
     "node": "20.12.2"
-  },
-  "msw": {
-    "workerDirectory": [
-      "public"
-    ]
   }
 }
