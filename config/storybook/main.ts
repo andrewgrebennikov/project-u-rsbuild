@@ -6,7 +6,6 @@ import { DefinePlugin, RuleSetRule } from 'webpack';
 const paths = {
   public: path.resolve(__dirname, '..', '..', 'public'),
   src: path.resolve(__dirname, '..', '..', 'src'),
-  node_modules: path.resolve(__dirname, '..', '..', 'node_modules'),
 };
 
 const config: StorybookConfig = {
@@ -43,7 +42,7 @@ const config: StorybookConfig = {
     const mode = config.mode || 'development';
     const isDev = mode === 'development';
 
-    config.resolve!.modules = [paths.src, paths.node_modules];
+    config.resolve!.modules = [paths.src, 'node_modules'];
     config.resolve!.extensions!.push('.ts', '.tsx');
     config.resolve!.alias = {
       ...config!.resolve!.alias,
