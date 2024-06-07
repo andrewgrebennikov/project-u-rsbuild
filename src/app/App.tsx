@@ -6,7 +6,7 @@ import { Sidebar } from '@/widgets/Sidebar';
 import { getAuthInited, userActions } from '@/entities/User';
 
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { Loader } from '@/shared/ui/Loader/Loader';
+import { Loader } from '@/shared/ui/Loader';
 
 import { AppRouter } from './router';
 

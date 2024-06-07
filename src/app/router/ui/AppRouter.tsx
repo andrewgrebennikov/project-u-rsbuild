@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Navbar } from '@/widgets/Navbar';
 
 import { routeConfig } from '@/shared/config/routeConfig/routeConfig';
-import { Loader } from '@/shared/ui/Loader/Loader';
+import { Loader } from '@/shared/ui/Loader';
 
 import { RequireAuth } from '../ui/RequireAuth';
 

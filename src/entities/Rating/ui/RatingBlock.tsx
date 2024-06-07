@@ -3,10 +3,10 @@ import { SyntheticEvent, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useModal } from '@/shared/hooks/useModal';
-import { Button, ButtonVariant } from '@/shared/ui/Button/Button';
-import { Modal } from '@/shared/ui/Modal/Modal';
-import { Rating } from '@/shared/ui/Rating/Rating';
-import { TextField } from '@/shared/ui/TextField/TextField';
+import { Button, ButtonVariant } from '@/shared/ui/Button';
+import { Modal } from '@/shared/ui/Modal';
+import { Rating } from '@/shared/ui/Rating';
+import { TextField } from '@/shared/ui/TextField';
 
 import styles from './RatingBlock.module.scss';
 

@@ -6,7 +6,7 @@ import { articleDetailsCommentsReducer } from '@/pages/ArticleDetailsPage';
 
 import { addCommentFormReducer } from '@/features/AddCommentForm';
 import { loginReducer } from '@/features/AuthByUsername';
-import { profileReducer } from '@/features/EditProfileCard/slice/profileSlice';
+import { profileReducer } from '@/features/EditProfileCard';
 
 import { articleReducer } from '@/entities/Article';
 

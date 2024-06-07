@@ -1,6 +1,6 @@
 import { cx } from 'classix';
 
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 import styles from './NotificationsItem.module.scss';
 

@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 
 import { getAuthData } from '@/entities/User';
 
-import { Button } from '@/shared/ui/Button/Button';
+import { Button } from '@/shared/ui/Button';
 
-import { getProfileFormData } from '../../selectors/getProfileFormData/getProfileFormData';
+import { getProfileFormData } from '../../model/selectors/getProfileFormData/getProfileFormData';
 
 import styles from './EditProfileCardHeader.module.scss';
 

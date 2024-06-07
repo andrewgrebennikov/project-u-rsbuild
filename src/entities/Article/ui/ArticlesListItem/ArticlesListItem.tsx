@@ -6,8 +6,8 @@ import { ArticlesView } from '@/features/ArticlesViewSelector';
 
 import IconEye from '@/shared/assets/icons/icon-eye.svg';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { Button, ButtonVariant } from '@/shared/ui/Button/Button';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Button, ButtonVariant } from '@/shared/ui/Button';
 
 import { Article, ArticleBlockType, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';

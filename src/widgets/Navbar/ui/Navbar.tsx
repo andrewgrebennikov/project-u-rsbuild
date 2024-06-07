@@ -10,9 +10,9 @@ import { NotificationsButton } from '@/features/NotificationsButton';
 import { getAuthData } from '@/entities/User';
 
 import { useModal } from '@/shared/hooks/useModal';
-import { Button, ButtonVariant } from '@/shared/ui/Button/Button';
-import { LangSwitcher } from '@/shared/ui/LangSwitcher/LangSwitcher';
-import { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher/ThemeSwitcher';
+import { Button, ButtonVariant } from '@/shared/ui/Button';
+import { LangSwitcher } from '@/shared/ui/LangSwitcher';
+import { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher';
 
 import styles from './Navbar.module.scss';
 

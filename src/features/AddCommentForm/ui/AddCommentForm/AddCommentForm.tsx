@@ -6,8 +6,8 @@ import { useSelector } from 'react-redux';
 import { DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { ReducersList } from '@/shared/lib/types/reducersList';
-import { Button, ButtonVariant } from '@/shared/ui/Button/Button';
-import { TextField } from '@/shared/ui/TextField/TextField';
+import { Button, ButtonVariant } from '@/shared/ui/Button';
+import { TextField } from '@/shared/ui/TextField';
 
 import { getCommentFormIsLoading } from '../../model/selectors/getCommentFormIsLoading/getCommentFormIsLoading';
 import { getCommentFormText } from '../../model/selectors/getCommentFormText/getCommentFormText';

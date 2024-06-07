@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 
-import { Modal } from '@/shared/ui/Modal/Modal';
+import { Modal } from '@/shared/ui/Modal';
 
 import { LoginFormLazy } from '../LoginForm/LoginFormLazy';
 

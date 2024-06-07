@@ -7,8 +7,8 @@ import { getUserIsAdmin, User, userActions } from '@/entities/User';
 import IconArrowDown from '@/shared/assets/icons/icon-arrow-down.svg';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { Dropdown } from '@/shared/ui/Dropdown/Dropdown';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Dropdown } from '@/shared/ui/Dropdown';
 
 interface IAvatarDropdownProps {
   className?: string;

@@ -91,7 +91,6 @@ export const routeConfig: AppRoutesProps[] = [
   {
     path: RoutePath.forbidden(),
     element: <ForbiddenPage />,
-    authOnly: true,
   },
   {
     path: RoutePath.not_found(),

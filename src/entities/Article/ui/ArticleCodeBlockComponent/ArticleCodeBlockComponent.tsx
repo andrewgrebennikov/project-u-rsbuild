@@ -2,7 +2,7 @@ import { cx } from 'classix';
 import { useCallback } from 'react';
 
 import IconCopy from '@/shared/assets/icons/icon-copy.svg';
-import { Button } from '@/shared/ui/Button/Button';
+import { Button } from '@/shared/ui/Button';
 
 import { ArticleCodeBlock } from '../../model/types/article';
 

@@ -3,7 +3,7 @@ import { cx } from 'classix';
 import { NotificationsList, useNotifications } from '@/entities/Notifications';
 
 import IconBell from '@/shared/assets/icons/icon-bell.svg';
-import { Popover } from '@/shared/ui/Popover/Popover';
+import { Popover } from '@/shared/ui/Popover';
 
 import styles from './NotificationsButton.module.scss';
 

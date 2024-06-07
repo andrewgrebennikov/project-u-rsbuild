@@ -9,13 +9,13 @@ import { DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { ReducersList } from '@/shared/lib/types/reducersList';
 
-import { getProfileError } from '../../selectors/getProfileError/getProfileError';
-import { getProfileFormData } from '../../selectors/getProfileFormData/getProfileFormData';
-import { getProfileIsLoading } from '../../selectors/getProfileIsLoading/getLoginIsLoading';
-import { getProfileReadonly } from '../../selectors/getProfileReadonly/getProfileReadonly';
-import { fetchProfileData } from '../../services/fetchProfileData/fetchProfileData';
-import { updateProfileData } from '../../services/updateProfileData/updateProfileData';
-import { profileActions, profileReducer } from '../../slice/profileSlice';
+import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
+import { getProfileFormData } from '../../model/selectors/getProfileFormData/getProfileFormData';
+import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getLoginIsLoading';
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
+import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
+import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
+import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { EditProfileCardHeader } from '../EditProfileCardHeader/EditProfileCardHeader';
 
 interface IEditProfileCardProps {

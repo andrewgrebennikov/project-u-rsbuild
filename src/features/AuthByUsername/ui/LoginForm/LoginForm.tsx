@@ -6,8 +6,8 @@ import { useSelector } from 'react-redux';
 import { DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { ReducersList } from '@/shared/lib/types/reducersList';
-import { Button } from '@/shared/ui/Button/Button';
-import { TextField } from '@/shared/ui/TextField/TextField';
+import { Button } from '@/shared/ui/Button';
+import { TextField } from '@/shared/ui/TextField';
 
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';

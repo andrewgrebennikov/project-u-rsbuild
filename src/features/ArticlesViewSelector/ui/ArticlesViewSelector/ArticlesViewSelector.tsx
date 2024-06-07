@@ -2,7 +2,7 @@ import { cx } from 'classix';
 
 import IconGrid from '@/shared/assets/icons/icon-grid.svg';
 import IconList from '@/shared/assets/icons/icon-list.svg';
-import { Button } from '@/shared/ui/Button/Button';
+import { Button } from '@/shared/ui/Button';
 
 import { ArticlesView } from '../../model/types/articles';
 

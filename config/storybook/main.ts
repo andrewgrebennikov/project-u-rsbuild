@@ -35,9 +35,7 @@ const config: StorybookConfig = {
       },
     },
   },
-  docs: {
-    autodocs: 'tag',
-  },
+  docs: {},
   webpackFinal: async (config) => {
     const mode = config.mode || 'development';
     const isDev = mode === 'development';
@@ -90,6 +88,9 @@ const config: StorybookConfig = {
     );
 
     return config;
+  },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
   },
 };
 
